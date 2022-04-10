@@ -149,7 +149,7 @@ body {
 
 .dd {
   position: relative;
-  width: 300px;
+  width: 100%;
 }
 
 .dd-value {
@@ -172,7 +172,6 @@ body {
 
 .dd__list {
   background-color: #FFFFFF;
-  display: none;
   z-index: 10;
   border: 1px solid #cccccc;
   border-radius: 4px;
@@ -309,8 +308,11 @@ body {
   align-items: center;
   margin-bottom: 24px;
 }
-.panel-search {
+.panel__search {
   margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 16px;
 }
 .panel__table {
   margin-bottom: 24px;
@@ -328,7 +330,7 @@ body {
 }
 .panel__table-row {
   display: grid;
-  grid-template-columns: 40px 1fr 200px 100px;
+  grid-template-columns: 40px 1fr 200px 200px 100px;
   border-bottom: 1px solid #cccccc;
 }
 .panel__table-row:first-child {
@@ -389,4 +391,31 @@ body {
 .panel__pagination-dots {
   margin-right: 4px;
   font-size: 18px;
+}
+
+.add {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-body {
+  background-color: #FFFFFF;
+  width: 500px;
+  padding: 24px;
+  border-radius: 4px;
+}
+.add__form-title {
+  margin-bottom: 24px;
+}
+.add__group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

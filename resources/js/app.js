@@ -21,6 +21,9 @@ window.Vue = require('vue');
 
 Vue.component('control-panel-component', require('./components/ControlPanelComponent.vue').default);
 Vue.component('user-list-component', require('./components/UserListComponent.vue').default);
+Vue.component('add-user-component', require('./components/AddUserComponent.vue').default);
+
+Vue.component('dropdown-component', require('./components/DropDownComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
