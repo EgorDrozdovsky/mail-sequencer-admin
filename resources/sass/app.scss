@@ -299,7 +299,48 @@ body{
 
         &-row{
             display: grid;
-            grid-template-columns: 40px 1fr 200px 200px 100px;
+            grid-template-columns: 40px 1fr 200px 200px 200px 100px;
+            border-bottom: 1px solid $gray;
+
+            &:first-child{
+                border-top: 1px solid $gray;
+            }
+
+            &-cell{
+                border-right: 1px solid $gray;
+                padding: 20px 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                &:first-child{
+                    border-left: 1px solid $gray;
+                }
+
+                &-icon{
+                    background-color: $main;
+                    width: 24px;
+                    height: 24px;
+                    padding: 4px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    transition: opacity .3s ease;
+
+                    &:hover{
+                        opacity: .8;
+                    }
+
+                    &:first-child{
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+
+        &-row2{
+            display: grid;
+            grid-template-columns: 40px 1fr 1fr 200px 100px;
             border-bottom: 1px solid $gray;
 
             &:first-child{
@@ -343,6 +384,7 @@ body{
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        margin-bottom: 40px;
 
         &-item{
             margin-right: 8px;

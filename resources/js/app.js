@@ -19,6 +19,9 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
+import Notifications from 'vue-notification'
+Vue.use(Notifications)
+
 Vue.component('control-panel-component', require('./components/ControlPanelComponent.vue').default);
 Vue.component('user-list-component', require('./components/UserListComponent.vue').default);
 Vue.component('add-user-component', require('./components/AddUserComponent.vue').default);

@@ -13,11 +13,11 @@
 <script>
 export default {
     name: "DropDownComponent",
-    props: ['label', 'list'],
+    props: ['label', 'list', 'default'],
     data(){
         return {
             show: false,
-            value: this.list[0]
+            value: this.default
         }
     },
     methods: {
