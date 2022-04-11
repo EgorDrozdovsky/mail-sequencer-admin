@@ -300,6 +300,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 24px;
+}
+.login__form-reset {
+  width: 100%;
+  text-align: center;
+  color: #6b6dfa;
 }
 
 .panel__header {

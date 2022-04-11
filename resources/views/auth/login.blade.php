@@ -37,6 +37,7 @@
                             <label class="form-check-label" for="remember">Remember me</label>
                         </div>
                     </div>
+                    <a href="/reset" class="login__form-reset">Forgot your password?</a>
                 </form>
             </div>
         </div>
