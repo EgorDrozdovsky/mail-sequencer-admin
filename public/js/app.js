@@ -2541,6 +2541,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "UserListComponent",
   data: function data() {
@@ -38821,49 +38824,59 @@ var render = function () {
           ]),
           _vm._v(" "),
           _vm._l(_vm.users, function (user) {
-            return _c("div", { staticClass: "panel__table-row" }, [
-              _c("p", { staticClass: "panel__table-row-cell" }, [
-                _vm._v(_vm._s(user.id)),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "panel__table-row-cell" }, [
-                _vm._v(_vm._s(user.email)),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "panel__table-row-cell" }, [
-                _vm._v(_vm._s(user.type)),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "panel__table-row-cell" }, [
-                _vm._v(_vm._s(_vm.formatDate(user.created_at))),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "panel__table-row-cell" }, [_vm._v("15")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "panel__table-row-cell" }, [
-                _c("img", {
-                  staticClass: "panel__table-row-cell-icon",
-                  attrs: { src: "/img/icons/Edit.svg", alt: "Edit" },
-                  on: {
-                    click: function ($event) {
-                      _vm.userEdit = user
-                      _vm.add = !_vm.add
-                    },
-                  },
-                }),
-                _vm._v(" "),
-                _c("img", {
-                  staticClass: "panel__table-row-cell-icon",
-                  attrs: { src: "/img/icons/Delete.svg", alt: "Delete" },
-                  on: {
-                    click: function ($event) {
-                      return _vm.delUser(user.id)
-                    },
-                  },
-                }),
-              ]),
-            ])
+            return _vm.users.length !== 0
+              ? _c("div", { staticClass: "panel__table-row" }, [
+                  _c("p", { staticClass: "panel__table-row-cell" }, [
+                    _vm._v(_vm._s(user.id)),
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "panel__table-row-cell" }, [
+                    _vm._v(_vm._s(user.email)),
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "panel__table-row-cell" }, [
+                    _vm._v(_vm._s(user.type)),
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "panel__table-row-cell" }, [
+                    _vm._v(_vm._s(_vm.formatDate(user.created_at))),
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "panel__table-row-cell" }, [
+                    _vm._v("15"),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "panel__table-row-cell" }, [
+                    _c("img", {
+                      staticClass: "panel__table-row-cell-icon",
+                      attrs: { src: "/img/icons/Edit.svg", alt: "Edit" },
+                      on: {
+                        click: function ($event) {
+                          _vm.userEdit = user
+                          _vm.add = !_vm.add
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass: "panel__table-row-cell-icon",
+                      attrs: { src: "/img/icons/Delete.svg", alt: "Delete" },
+                      on: {
+                        click: function ($event) {
+                          return _vm.delUser(user.id)
+                        },
+                      },
+                    }),
+                  ]),
+                ])
+              : _vm._e()
           }),
+          _vm._v(" "),
+          _vm.users.length === 0
+            ? _c("div", { staticClass: "panel__table-row-full" }, [
+                _vm._v("\n            Ничего не найдено\n        "),
+              ])
+            : _vm._e(),
         ],
         2
       ),

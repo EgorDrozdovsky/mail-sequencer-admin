@@ -17,7 +17,7 @@
                 <p class="panel__table-row-cell table-title" :class="{active: sort === 5}" @click="sort = 5; getUsers()">Total sequences</p>
                 <p class="panel__table-row-cell table-title"></p>
             </div>
-            <div class="panel__table-row" v-for="user in users">
+            <div class="panel__table-row" v-for="user in users" v-if="users.length !== 0">
                 <p class="panel__table-row-cell">{{ user.id }}</p>
                 <p class="panel__table-row-cell">{{ user.email }}</p>
                 <p class="panel__table-row-cell">{{ user.type }}</p>
@@ -27,6 +27,9 @@
                     <img src="/img/icons/Edit.svg" alt="Edit" class="panel__table-row-cell-icon" @click="userEdit = user; add = !add">
                     <img src="/img/icons/Delete.svg" alt="Delete" class="panel__table-row-cell-icon" @click="delUser(user.id)">
                 </div>
+            </div>
+            <div class="panel__table-row-full" v-if="users.length === 0">
+                Ничего не найдено
             </div>
         </div>
         <div class="panel__pagination">

@@ -306,6 +306,14 @@ body{
                 border-top: 1px solid $gray;
             }
 
+            &-full{
+                width: 100%;
+                padding: 16px 0;
+                font-size: 20px;
+                font-weight: 700;
+                text-align: center;
+            }
+
             &-cell{
                 border-right: 1px solid $gray;
                 padding: 20px 0;
@@ -345,6 +353,10 @@ body{
 
             &:first-child{
                 border-top: 1px solid $gray;
+            }
+
+            .table-title {
+                cursor: unset;
             }
 
             &-cell{

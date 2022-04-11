@@ -336,6 +336,13 @@ body {
 .panel__table-row:first-child {
   border-top: 1px solid #cccccc;
 }
+.panel__table-row-full {
+  width: 100%;
+  padding: 16px 0;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
 .panel__table-row-cell {
   border-right: 1px solid #cccccc;
   padding: 20px 0;
@@ -369,6 +376,9 @@ body {
 }
 .panel__table-row2:first-child {
   border-top: 1px solid #cccccc;
+}
+.panel__table-row2 .table-title {
+  cursor: unset;
 }
 .panel__table-row2-cell {
   border-right: 1px solid #cccccc;
